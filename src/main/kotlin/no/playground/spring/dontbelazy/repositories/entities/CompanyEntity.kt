@@ -1,4 +1,4 @@
-package no.playground.spring.dontbelazy.repository.entities
+package no.playground.spring.dontbelazy.repositories.entities
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -7,8 +7,8 @@ import jakarta.persistence.Id
 import jakarta.persistence.ManyToOne
 import jakarta.persistence.OneToMany
 import jakarta.persistence.Table
-import no.playground.spring.dontbelazy.api.models.CompanyModel
-import no.playground.spring.dontbelazy.api.models.EmployeeModel
+import no.playground.spring.dontbelazy.apis.companies.models.CompanyModel
+import no.playground.spring.dontbelazy.apis.companies.models.EmployeeModel
 
 @Entity
 @Table(name = "company")

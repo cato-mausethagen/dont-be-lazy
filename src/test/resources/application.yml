@@ -1,0 +1,17 @@
+server:
+  servlet:
+    context-path: /api/v1
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/im_lazy
+
+  ai:
+    openai.api-key: some-key
+
+  flyway:
+    enabled: false
+

@@ -1,7 +1,7 @@
-package no.playground.spring.dontbelazy.api.models
+package no.playground.spring.dontbelazy.apis.companies.models
 
-import no.playground.spring.dontbelazy.repository.entities.CompanyEntity
-import no.playground.spring.dontbelazy.repository.entities.EmployeeEntity
+import no.playground.spring.dontbelazy.repositories.entities.CompanyEntity
+import no.playground.spring.dontbelazy.repositories.entities.EmployeeEntity
 
 data class CompanyModel(
         var id: Long,
