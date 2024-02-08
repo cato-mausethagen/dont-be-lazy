@@ -13,11 +13,6 @@ import org.springframework.web.server.ResponseStatusException
 @RequestMapping("/motherOrganisations")
 class MotherOrganisationApi(val motherOrganisationsService: MotherOrganisationsService) {
 
-   @GetMapping
-   fun findAllMotherOrganisations(): List<MotherOrganisationEntity> {
-      return motherOrganisationsService.findAllMotherOrganisations()
-   }
-
    @GetMapping("/orgnr/{motherOrgNr}")
    fun findByOrganisationNumber(@PathVariable motherOrgNr: String): MotherOrganisationEntity? {
       return motherOrganisationsService.findByOrganisationNumber(motherOrgNr = motherOrgNr) ?: throw ResponseStatusException(

@@ -17,11 +17,6 @@ class CompanyApi(val companiesService: CompaniesService) {
 
    private val log = LoggerFactory.getLogger(javaClass)
 
-   @GetMapping
-   fun findAllCompanies(): List<CompanyEntity> {
-      return companiesService.findAllCompanies()
-   }
-
    @GetMapping("/orgnr/{orgNr}")
    fun getCompanyByOrgNr(@PathVariable orgNr: String): CompanyEntity? {
       log.info("Find company by organisation number: '$orgNr'")

@@ -10,10 +10,6 @@ class MotherOrganisationsService(val motherOrganisationsRepository: MotherOrgani
 
    private val log = LoggerFactory.getLogger(javaClass)
 
-   fun findAllMotherOrganisations(): List<MotherOrganisationEntity> {
-      return motherOrganisationsRepository.findAll()
-   }
-
    fun findByOrganisationNumber(motherOrgNr: String): MotherOrganisationEntity? {
       return motherOrganisationsRepository.findByMotherOrgNr(motherOrgNr = motherOrgNr)
    }

@@ -1,6 +1,5 @@
 package no.playground.spring.dontbelazy.product.services
 
-import no.playground.spring.dontbelazy.product.apis.models.CompanyModel
 import no.playground.spring.dontbelazy.product.repositories.CompaniesRepository
 import no.playground.spring.dontbelazy.product.repositories.entities.CompanyEntity
 import org.slf4j.LoggerFactory
@@ -11,12 +10,8 @@ class CompaniesService(val companiesRepository: CompaniesRepository) {
 
    private val log = LoggerFactory.getLogger(javaClass)
 
-   fun findAllCompanies(): List<CompanyEntity> {
-      return companiesRepository.findAll() // .map { it.toModel() }
-   }
-
    fun findCompanyByOrgNr(orgNr: String): CompanyEntity? {
-      return companiesRepository.findByCompanyOrgNr(companyOrgNr = orgNr) //?.toModel()
+      return companiesRepository.findByCompanyOrgNr(companyOrgNr = orgNr)
    }
 
 }
