@@ -44,6 +44,7 @@ data class CompanyEntity(
 
    @OneToOne(fetch = FetchType.LAZY)
    @JoinColumn(name = "mother_org_id")
+   @JsonIgnoreProperties("company")
    var motherOrganisation: MotherOrganisationEntity,
 
    @OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
