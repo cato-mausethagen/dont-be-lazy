@@ -1,4 +1,4 @@
-package no.playground.spring.dontbelazy.services
+package no.playground.spring.dontbelazy.ai.services
 
 import org.slf4j.LoggerFactory
 import org.springframework.ai.openai.OpenAiChatClient

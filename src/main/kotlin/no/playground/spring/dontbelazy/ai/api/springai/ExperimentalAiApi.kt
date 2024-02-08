@@ -1,6 +1,6 @@
-package no.playground.spring.dontbelazy.apis.springai
+package no.playground.spring.dontbelazy.ai.api.springai
 
-import no.playground.spring.dontbelazy.services.ExperimentalAiService
+import no.playground.spring.dontbelazy.ai.services.ExperimentalAiService
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
