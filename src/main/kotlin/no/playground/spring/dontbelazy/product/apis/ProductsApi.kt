@@ -14,11 +14,6 @@ class ProductsApi(val productsService: ProductsService) {
 
    private val log = LoggerFactory.getLogger(javaClass)
 
-   @GetMapping
-   fun findAllProducts(): List<ProductEntity> {
-      return productsService.findAllProducts()
-   }
-
    @GetMapping("/company/orgnr/{companyOrgNr}")
    fun findProductsByCompanyId(@PathVariable companyOrgNr: String): List<ProductEntity> {
       return productsService.findProductsByCompanyOrgNr(companyOrgNr = companyOrgNr)

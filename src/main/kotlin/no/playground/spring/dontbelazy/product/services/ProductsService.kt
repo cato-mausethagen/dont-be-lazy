@@ -15,10 +15,6 @@ class ProductsService(
 
    private val log = LoggerFactory.getLogger(javaClass)
 
-   fun findAllProducts(): List<ProductEntity> {
-      return productsRepository.findAll()
-   }
-
    fun findProductsByCompanyOrgNr(companyOrgNr: String): List<ProductEntity> {
       val company = companiesService.findCompanyByOrgNr(orgNr = companyOrgNr) ?: throw ResponseStatusException(
          HttpStatus.NOT_FOUND,

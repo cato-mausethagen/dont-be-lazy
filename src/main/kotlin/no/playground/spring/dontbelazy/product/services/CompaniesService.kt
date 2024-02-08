@@ -10,10 +10,6 @@ class CompaniesService(val companiesRepository: CompaniesRepository) {
 
    private val log = LoggerFactory.getLogger(javaClass)
 
-   fun findAllCompanies(): List<CompanyEntity> {
-      return companiesRepository.findAll()
-   }
-
    fun findCompanyByOrgNr(orgNr: String): CompanyEntity? {
       return companiesRepository.findByCompanyOrgNr(companyOrgNr = orgNr)
    }

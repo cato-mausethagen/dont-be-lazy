@@ -7,21 +7,6 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "mother_organisations")
-data class MotherOrganisationEntity(
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   var id: Long,
-
-   var name: String,
-
-   var motherOrgNr: String,
-
-   var description: String?
-
-)
-
-@Entity
 @Table(name = "companies")
 data class CompanyEntity(
    @Id
