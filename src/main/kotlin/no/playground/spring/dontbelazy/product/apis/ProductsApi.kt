@@ -1,5 +1,6 @@
 package no.playground.spring.dontbelazy.product.apis
 
+import no.playground.spring.dontbelazy.product.apis.models.ProductModel
 import no.playground.spring.dontbelazy.product.repositories.entities.ProductEntity
 import no.playground.spring.dontbelazy.product.services.ProductsService
 import org.slf4j.LoggerFactory

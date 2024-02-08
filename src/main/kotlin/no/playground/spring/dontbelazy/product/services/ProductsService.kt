@@ -16,7 +16,7 @@ class ProductsService(
    private val log = LoggerFactory.getLogger(javaClass)
 
    fun findAllProducts(): List<ProductEntity> {
-      return productsRepository.findAll()
+      return productsRepository.findAll() // .map { it.toModel() }
    }
 
    fun findProductsByCompanyOrgNr(companyOrgNr: String): List<ProductEntity> {
@@ -24,6 +24,6 @@ class ProductsService(
          HttpStatus.NOT_FOUND,
          "No company found with organisation number '$companyOrgNr'"
       )
-      return productsRepository.findByCompanyId(companyId = company.id)
+      return productsRepository.findByCompanyId(companyId = company.id) // .map { it.toModel() }
    }
 }
