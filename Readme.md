@@ -9,6 +9,16 @@ In this project, the `Entity` objects are exposed directly on the REST APIs.
 **Don't do this in a real application!** Map your entity objects to API models, before exposing them in a `@RestController`.
 This makes sure you don't get a tight coupling between the API versioning and your internal database model, and you can make changes on either side without it directly affecting the other side. 
 
+# Branches
+Please note the different branches related to the different use cases.
+
+# API Collection
+```
+GET: http://localhost:8080/api/v1/companies
+GET: http://localhost:8080/api/v1/products
+GET: http://localhost:8080/api/v1/motherOrganisations
+```
+
 # Docs
 ## About
 From project root, you find the folder `docs` which contains some of the documents used during the presentation.
